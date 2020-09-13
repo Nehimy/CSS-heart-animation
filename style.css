@@ -1,0 +1,245 @@
+body{
+	background: fff;
+  margin: 0px;
+  background:black;
+}
+
+
+.name {
+    background: linear-gradient(45deg, rgb(32, 114, 214) 0%, rgb(78, 140, 213) 100%);
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    padding-left: 10px;
+}
+
+img{
+	height: 60px;
+}
+
+/*****************************************************************************/
+
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  margin: 0px;
+  font-size: 0px;
+  padding: 0px;
+}
+
+.col{
+  display:inline-block;
+  width: 19%;
+}
+
+.heart{
+  /*content*/
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 120vh;
+  z-index:-1;
+}
+
+.circle{
+  /*circle2*/
+  width:90px;
+  height:90px;
+  content:'';
+  background-color: crimson;
+  position: absolute;
+  margin: 35px 0px 0px 30px;
+  transform: rotate(-135deg);
+}
+
+.circle::after{
+  /*square*/
+  width: 90px;
+  height: 90px;
+  content:'';
+  background-color: crimson;
+  border-radius: 45px;
+  position: absolute;
+  margin: 44px 0px;
+}
+
+.circle::before{
+  /*circle1*/
+  width: 90px;
+  height: 90px;    
+  content:'';
+  background-color: crimson;
+  position: absolute;
+  z-index: 1;
+  margin: 0px 44px;
+  border-radius: 45px;
+}
+/******************************/
+.heart.heart1 .circle{
+  animation: 12s colors infinite;
+  animation-delay: 0s;
+}
+.heart.heart1 .circle::before{
+  animation: 12s colors infinite;
+  animation-delay: 0s;
+}
+.heart.heart1 .circle::after{
+  animation: 12s colors infinite;
+  animation-delay: 0s;
+}
+
+
+.heart.heart2 .circle{
+  animation: 12s colors infinite;
+  animation-delay: 3s;
+}
+.heart.heart2 .circle::before{
+  animation: 12s colors infinite;
+  animation-delay: 3s;
+}
+.heart.heart2 .circle::after{
+  animation: 12s colors infinite;
+  animation-delay: 3s;
+}
+
+.heart.heart3 .circle{
+  animation: 12s colors infinite;
+  animation-delay: 6s;
+}
+.heart.heart3 .circle::before{
+  animation: 12s colors infinite;
+  animation-delay: 6s;
+}
+.heart.heart3 .circle::after{
+  animation: 12s colors infinite;
+  animation-delay: 6s;
+}
+
+.heart.heart4 .circle{
+  animation: 12s colors infinite;
+  animation-delay: 9s;
+}
+.heart.heart4 .circle::before{
+  animation: 12s colors infinite;
+  animation-delay: 9s;
+}
+.heart.heart4 .circle::after{
+  animation: 12s colors infinite;
+  animation-delay: 9s;
+}
+
+.heart.heart5 .circle{
+  animation: 12s colors infinite;
+  animation-delay: 5s;
+}
+.heart.heart5 .circle::before{
+  animation: 12s colors infinite;
+  animation-delay: 5s;
+}
+.heart.heart5 .circle::after{
+  animation: 12s colors infinite;
+  animation-delay: 5s;
+}
+
+
+@keyframes colors{
+  0%{     
+     background-color: #b30000;
+  }
+  25%{
+    background-color: #24248f;
+  }
+  50%{
+    background-color: #ff1a9f;
+  }
+  75%{
+    background-color: #fbd204;
+  }
+  100%{
+    background-color: #b30000;
+  }
+}
+/******************************/
+.halfMoon{
+  background: transparent;
+  height: 90px;
+  width: 45px;
+  position: absolute;
+  border-radius: 76px 0px 0px 0px;
+  margin: 82px 81px;
+  transform: rotate(45deg);
+}
+.halfMoon::before{
+  background: black;
+  height: 90px;
+  width: 45px;
+  border-radius: 76px 0px 0px 0px;
+  content: '';
+  position: absolute;
+  margin: 45px -40px;
+  transform: rotate(78.5deg);
+}
+
+.halfMoon::after{
+  background: black;
+  height: 90px;
+  width: 45px;
+  border-radius: 0px 0px 0px 76px;  
+  content: '';
+  margin: 3px 7px;
+  position: absolute;  
+  transform: rotate(369deg);
+}
+
+.heart1{
+  animation: 20s Linear-motion infinite,MoveLeft 23s infinite;
+  animation-delay: 5s;
+}
+
+.heart2{
+  animation: 12s Linear-motion infinite, MoveLeft 15s infinite;
+  animation-delay: 1s;
+}
+
+.heart3{
+  animation: 12s Linear-motion infinite, MoveLeft 15s infinite;
+  animation-delay: 18s;
+}
+
+.heart4{
+  animation: 16s Linear-motion infinite, MoveLeft 19s infinite;
+  animation-delay: 11s;
+}
+
+.heart5{
+  animation: 15s Linear-motion infinite, MoveLeft 18s infinite;
+  animation-delay: 5s;
+}
+
+@keyframes Linear-motion{
+  0%{     
+    top:100vh;
+  }
+  100%{
+    top:-20vh;
+  }
+}
+
+@keyframes MoveLeft{
+  0%{
+    margin-left: 0%;
+  }
+  50%{
+    margin-left:50%;
+  }
+  100%{
+    margin-left: 0%;
+  }
+}
+
